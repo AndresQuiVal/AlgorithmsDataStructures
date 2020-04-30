@@ -1,0 +1,13 @@
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\bin\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.exe
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\bin\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.deps.json
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\bin\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.runtimeconfig.json
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\bin\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.runtimeconfig.dev.json
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\bin\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.dll
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\bin\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.pdb
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.csprojAssemblyReference.cache
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.AssemblyInfoInputs.cache
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.AssemblyInfo.cs
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.dll
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.pdb
+C:\Users\andre\source\repos\DataStructAndAlgorithmsProject1\DataStructAndAlgorithmsProject1\obj\Debug\netcoreapp3.1\DataStructAndAlgorithmsProject1.genruntimeconfig.cache
