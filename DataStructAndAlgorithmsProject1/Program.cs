@@ -292,13 +292,13 @@ namespace DataStructAndAlgorithmsProject1
 
             Console.WriteLine("\nGiven a BT, return the sum of all the depths for all the nodes in it\nSOLUTION");
             BinarySearchTree bst2 = new BinarySearchTree();
-            //bst2.AddNode(4);
-            //bst2.AddNode(2);
-            //bst2.AddNode(6);
-            //bst2.AddNode(1);
-            //bst2.AddNode(3);
-            //bst2.AddNode(7);
-            //bst2.AddNode(5);
+            bst2.AddNode(4);
+            bst2.AddNode(2);
+            bst2.AddNode(6);
+            bst2.AddNode(1);
+            bst2.AddNode(3);
+            bst2.AddNode(7);
+            bst2.AddNode(5);
 
             Console.WriteLine(bst2.SumDepths());
 
@@ -311,6 +311,9 @@ namespace DataStructAndAlgorithmsProject1
             rootNode.LeftRoot.LeftRoot = new BSTNode<int>(2);
 
             Console.WriteLine($"\nIs Binary Search Tree the following tree?: {bst2.IsBST(rootNode)}");
+
+            Console.WriteLine($"\nBinarySearchTreee.GetPredecessor(4): {bst2.GetPredecessor(4).Value}");
+            Console.WriteLine($"\nBinarySearchTreee.GetSucessor(3): {bst2.GetSuccesor(3).Value}");
         }
         public enum LRSelection { Left, Right };
 

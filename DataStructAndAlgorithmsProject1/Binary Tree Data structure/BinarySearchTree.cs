@@ -256,7 +256,98 @@ namespace DataStructAndAlgorithmsProject1.Binary_Tree_Data_structure
             return root.Value <= max && root.Value > min
                 && IsBSTUtil(root.LeftRoot, min, root.Value)
                 && IsBSTUtil(root.RightRoot, root.Value, max);
-        } 
+        }
+        #endregion
+
+        #region Succesor of node (inorder traversal)
+        
+        public BSTNode<int> GetSuccesor(int value)
+        {
+            if (Root == null) return null;
+
+            var refNode = Root;
+            BSTNode<int> succesor = null;
+
+            while (refNode != null)
+            {
+                if (refNode.Value == value)
+                    break;
+                else if (value > refNode.Value)
+                    refNode = refNode.RightRoot;
+                else
+                    refNode = refNode.LeftRoot;
+            }
+            BSTNode<int> sRefNode;
+
+            if (refNode.RightRoot != null)
+            {
+                sRefNode = refNode.RightRoot;
+                while (sRefNode.LeftRoot != null)
+                    sRefNode = sRefNode.LeftRoot;
+                return sRefNode;
+            }
+
+            else
+            {
+                sRefNode = Root;
+                while(sRefNode != refNode)
+                {
+                    if (value > sRefNode.Value)
+                        sRefNode = sRefNode.RightRoot;
+                    else
+                    {
+                        succesor = sRefNode;
+                        sRefNode = sRefNode.LeftRoot;
+                    }
+                }
+            }
+            return succesor;
+        }
+        #endregion
+
+        #region Predecessor of node (inorder traversal)
+
+        public BSTNode<int> GetPredecessor(int value)
+        {
+            if (Root == null) return null;
+
+            var refNode = Root;
+            BSTNode<int> predecessor = null;
+
+            while (refNode != null)
+            {
+                if (refNode.Value == value)
+                    break;
+                else if (value > refNode.Value)
+                    refNode = refNode.RightRoot;
+                else
+                    refNode = refNode.LeftRoot;
+            }
+            BSTNode<int> sRefNode;
+
+            if (refNode.LeftRoot != null)
+            {
+                sRefNode = refNode.LeftRoot;
+                while (sRefNode.RightRoot != null)
+                    sRefNode = sRefNode.RightRoot;
+                return sRefNode;
+            }
+
+            else
+            {
+                sRefNode = Root;
+                while (sRefNode != refNode)
+                {
+                    if (value > sRefNode.Value)
+                    {
+                        predecessor = sRefNode;
+                        sRefNode = sRefNode.RightRoot;
+                    }
+                    else sRefNode = sRefNode.LeftRoot;
+                }
+            }
+            return predecessor;
+        }
         #endregion
     }
 }
