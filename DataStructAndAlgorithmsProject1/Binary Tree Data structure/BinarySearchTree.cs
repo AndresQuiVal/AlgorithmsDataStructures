@@ -349,5 +349,72 @@ namespace DataStructAndAlgorithmsProject1.Binary_Tree_Data_structure
             return predecessor;
         }
         #endregion
+
+        #region Remove nodes in BST
+
+        public BSTNode<int> DeleteNode(BSTNode<int> node, int _value) // my solution
+        {
+            if (_value > node.Value)
+                node.RightRoot = DeleteNode(node.RightRoot, _value);
+            else if (_value < node.Value)
+                node.LeftRoot = DeleteNode(node.LeftRoot, _value);
+            else
+            {
+                if (node.LeftRoot == null && node.RightRoot == null)
+                    node = null;
+                else if (node.LeftRoot == null)
+                    node = node.RightRoot;
+                else if (node.RightRoot == null)
+                    node = node.LeftRoot;
+                else
+                {
+                    BSTNode<int> leftMax = FindMax(node.LeftRoot);
+                    leftMax.RightRoot = node.RightRoot;
+                    node.RightRoot = null;
+                    node = node.LeftRoot;
+                }
+            }
+
+            return node;
+        }
+
+        public BSTNode<int> DeleteNodeMCD(BSTNode<int> node, int value)
+        {
+            if (value < node.Value)
+                node.LeftRoot = DeleteNodeMCD(node.LeftRoot, value);
+            else if (value > node.Value)
+                node.RightRoot = DeleteNodeMCD(node.RightRoot, value);
+            else
+            {
+                if (node.RightRoot == null && node.LeftRoot == null)
+                    node = null;
+                else if (node.RightRoot == null)
+                    node = node.LeftRoot;
+                else if (node.LeftRoot == null)
+                    node = node.RightRoot;
+                else
+                {
+                    int maxValueNode = FindMaxRecursive(node.LeftRoot).Value;
+                    node.Value = maxValueNode;
+                    node.LeftRoot = DeleteNodeMCD(node.LeftRoot, maxValueNode);
+                }
+            }
+            return node;
+        }
+
+        private BSTNode<int> FindMax(BSTNode<int> node) // better than recursive approach
+        {
+            var refNode = node;
+            while (node.RightRoot != null) refNode = refNode.RightRoot;
+            return refNode;
+        }
+
+        private BSTNode<int> FindMaxRecursive(BSTNode<int> node)
+        {
+            if (node.RightRoot == null) return node;
+            return FindMaxRecursive(node.RightRoot);
+        }
+
+        #endregion
     }
 }

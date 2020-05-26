@@ -314,6 +314,15 @@ namespace DataStructAndAlgorithmsProject1
 
             Console.WriteLine($"\nBinarySearchTreee.GetPredecessor(4): {bst2.GetPredecessor(4).Value}");
             Console.WriteLine($"\nBinarySearchTreee.GetSucessor(3): {bst2.GetSuccesor(3).Value}");
+
+            Console.WriteLine("\nBinarySearchTree.DeleteNode(6)");
+            bst2.DeleteNode(bst2.Root, 6);
+
+            bst2.AddNode(6);
+            Console.WriteLine("\nBinarySearchTree.DeleteNodeMCD(6)");
+            bst2.DeleteNodeMCD(bst2.Root, 6);
+
+            bst2.AddNode(6);
         }
         public enum LRSelection { Left, Right };
 
