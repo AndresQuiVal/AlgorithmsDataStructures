@@ -1,4 +1,6 @@
 ﻿using DataStructAndAlgorithmsProject1.Binary_Tree_Data_structure;
+using DataStructAndAlgorithmsProject1.Binary_Tree_Data_structure.Binary_Heap;
+using DataStructAndAlgorithmsProject1.Graph_implementations;
 using DataStructAndAlgorithmsProject1.Queue_Data_structure;
 using DataStructAndAlgorithmsProject1.Stack_Data_structure;
 using System;
@@ -323,6 +325,52 @@ namespace DataStructAndAlgorithmsProject1
             bst2.DeleteNodeMCD(bst2.Root, 6);
 
             bst2.AddNode(6);
+
+            //Graphs
+
+            Console.WriteLine("Graphs---------------------------");
+            EdgeListGraph<int> undirectedGraph = new EdgeListGraph<int>();
+            undirectedGraph.vertices = new int[] { 1, 2, 3, 4 };
+            undirectedGraph.edges = new Edge[] { new Edge(0, 1), new Edge(0, 3), new Edge(2, 1), new Edge(2, 3) };
+            Console.WriteLine("undirectedGraph.GetAdyacentNodes(4): ");
+            undirectedGraph.GetAdyacentNodes(4);
+
+            //Heaps
+
+            Console.WriteLine("Min Heap ds-----------");
+            MinHeap minHeap = new MinHeap(10);
+            minHeap.Insert(7);
+            minHeap.Insert(3);
+            minHeap.Insert(6);
+            minHeap.Remove();
+            minHeap.Insert(1);
+            minHeap.Insert(2);
+            minHeap.Remove();
+            minHeap.Insert(5);
+            minHeap.Insert(4);
+
+            foreach(var item in minHeap)
+                Console.WriteLine(item);
+
+            Console.WriteLine("-Max Heap--------------------------------");
+
+            MaxHeap maxHeap = new MaxHeap(10);
+            maxHeap.Insert(2);
+            maxHeap.Insert(1);
+            maxHeap.Insert(4);
+            maxHeap.Remove();
+            maxHeap.Insert(2);
+            maxHeap.Insert(1);
+            maxHeap.Insert(9);
+            maxHeap.Remove();
+            Console.WriteLine(maxHeap.Peek() == 2);
+
+            foreach (var item in maxHeap)
+                Console.WriteLine(item);
+            
+
+
+
         }
         public enum LRSelection { Left, Right };
 
